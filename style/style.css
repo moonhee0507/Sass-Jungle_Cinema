@@ -1,0 +1,155 @@
+body {
+  text-align: center;
+}
+
+body main {
+  width: 1060px;
+  margin-top: 86px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #F2F2F2;
+  border-radius: 15px;
+}
+
+body main h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100px;
+  width: 650px;
+  border-bottom: 2px solid #BDBDBD;
+  margin: 0 auto;
+}
+
+body main button {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin: 28px 30px;
+}
+
+body main button + button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #828282;
+}
+
+body main .movie-list article {
+  font-family: 'Noto Sans KR';
+}
+
+body main .movie-list article ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-column-gap: 23px;
+  column-gap: 23px;
+  row-gap: 24px;
+  width: 1003px;
+  border: 2px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: #FFFFFF;
+  padding: 25px 26px 0 26px;
+  margin: 0 auto;
+}
+
+body main .movie-list article ul li {
+  position: relative;
+  width: 220px;
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-align: left;
+}
+
+body main .movie-list article ul li img {
+  width: 180px;
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 19px 20px 0px 20px;
+}
+
+body main .movie-list article ul li strong {
+  display: block;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 11px 20px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body main .movie-list article ul li .spec {
+  margin: 0px 20px 0px;
+}
+
+body main .movie-list article ul li .spec dl {
+  float: left;
+}
+
+body main .movie-list article ul li .spec dl dt {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #828282;
+}
+
+body main .movie-list article ul li .spec dl dd {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  margin-left: 5px;
+}
+
+body main .movie-list article ul li .spec dl:nth-child(1) {
+  margin-right: 40px;
+}
+
+body main .movie-list article ul li .spec dl:nth-child(4) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 18px;
+}
+
+body main .movie-list article ul li .button {
+  clear: both;
+  text-align: center;
+  border: 1px solid #BDBDBD;
+  background: #F2F2F2;
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+body main .movie-list article ul li .button .reserve {
+  border-bottom-left-radius: 15px;
+}
+
+body main .movie-list article ul li .button .preview {
+  border-bottom-right-radius: 15px;
+}
+/*# sourceMappingURL=style.css.map */

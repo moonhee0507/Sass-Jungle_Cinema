@@ -1,0 +1,146 @@
+@mixin fontstyle {
+  font-family: 'Noto Sans KR';
+}
+
+body {
+  text-align: center;
+  main {
+    width: 1060px;
+    margin-top: 86px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #F2F2F2;
+    border-radius: 15px;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 100px;
+      width: 650px;
+      border-bottom: 2px solid #BDBDBD;
+      margin: 0 auto;
+    }
+    button {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      margin: 28px 30px;
+    }
+    button + button {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #828282;      
+    }
+
+    .movie-list {
+      article {
+        // TODO: 폰트 구현 확인(Noto)
+        @include fontstyle;
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          -webkit-column-gap: 23px;
+             -moz-column-gap: 23px;
+                  column-gap: 23px;
+          row-gap: 24px;
+          width: 1003px;
+          border: 2px solid #BDBDBD;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          border-radius: 15px;
+          background: #FFFFFF;
+          padding: 25px 26px 0 26px;
+          margin: 0 auto;
+          li {
+            position: relative;
+            width: 220px;
+            border: 1px solid #BDBDBD;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: left;
+            img {
+              width: 180px;
+              border: 1px solid #BDBDBD;
+              -webkit-box-sizing: border-box;
+                      box-sizing: border-box;
+              -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 10px;
+              margin: 19px 20px 0px 20px;
+            }
+            strong {
+              display: block;
+              font-style: normal;
+              font-weight: 900;
+              font-size: 16px;
+              line-height: 23px;
+              margin: 11px 20px 12px;
+              white-space: nowrap;
+              overflow: hidden;
+              -o-text-overflow: ellipsis;
+                 text-overflow: ellipsis;
+            }
+            .spec {
+              margin: 0px 20px 0px;
+              dl {
+                float: left;
+                dt {
+                  display: inline-block;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 13px;
+                  line-height: 19px;
+                  color: #828282;
+                }
+                dd {
+                  display: inline-block;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 13px;
+                  line-height: 19px;
+                  margin-left: 5px;
+                }
+              }
+              dl:nth-child(1) {
+                margin-right: 40px;
+              }
+              dl:nth-child(4) {
+                white-space: nowrap;
+                overflow: hidden;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                margin-bottom: 18px;
+              }
+            }
+            // TODO: 버튼 디자인
+            .button {
+              clear: both;
+              text-align: center;
+              border: 1px solid #BDBDBD;
+              background: #F2F2F2;
+              font-family: 'Noto Sans KR';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              .reserve {
+                border-bottom-left-radius: 15px;
+              }
+              .preview {
+                border-bottom-right-radius: 15px;
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
