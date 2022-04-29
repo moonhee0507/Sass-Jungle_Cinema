@@ -38,7 +38,6 @@ body {
 
     .movie-list {
       article {
-        // TODO: 폰트 구현 확인(Noto)
         @include fontstyle;
         ul {
           display: grid;
@@ -117,25 +116,42 @@ body {
                 overflow: hidden;
                 -o-text-overflow: ellipsis;
                    text-overflow: ellipsis;
-                margin-bottom: 18px;
+                margin-bottom: 58px;
               }
             }
             // TODO: 버튼 디자인
             .button {
               clear: both;
+              position: absolute;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr;
               text-align: center;
-              border: 1px solid #BDBDBD;
-              background: #F2F2F2;
-              font-family: 'Noto Sans KR';
+              @include fontstyle;
               font-style: normal;
               font-weight: 500;
               font-size: 14px;
+              line-height: 20px;
+              background: #F2F2F2;
               .reserve {
-                border-bottom-left-radius: 15px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                border-bottom-left-radius: 10px;
+                -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                width: 110px;
+                bottom: 0px;
+                left: 0px;
               }
               .preview {
-                border-bottom-right-radius: 15px;
-
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                border-bottom-right-radius: 10px;
+                -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                width: 110px;
+                bottom: 0px;
+                left: 110px;
               }
             }
           }
