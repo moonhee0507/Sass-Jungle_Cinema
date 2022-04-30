@@ -9,6 +9,7 @@ body main {
   margin-right: auto;
   background: #F2F2F2;
   border-radius: 15px;
+  text-align: center;
 }
 
 body main h1 {
@@ -39,6 +40,7 @@ body main button + button {
 }
 
 body main .movie-list article {
+  padding: 0 27px 30px 27px;
   font-family: 'Noto Sans KR';
 }
 
@@ -58,12 +60,10 @@ body main .movie-list article ul {
   box-sizing: border-box;
   border-radius: 15px;
   background: #FFFFFF;
-  padding: 25px 26px 0 26px;
-  margin: 0 auto;
+  padding: 25px 26px 29px 26px;
 }
 
 body main .movie-list article ul li {
-  position: relative;
   width: 220px;
   border: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
@@ -72,13 +72,13 @@ body main .movie-list article ul li {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   text-align: left;
+  padding-bottom: 0px;
 }
 
 body main .movie-list article ul li img {
   width: 180px;
+  height: 250px;
   border: 1px solid #BDBDBD;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -134,25 +134,22 @@ body main .movie-list article ul li .spec dl:nth-child(4) {
   margin-bottom: 58px;
 }
 
-body main .movie-list article ul li .button {
+body main .movie-list article ul li .button.reserve,
+body main .movie-list article ul li .button.preview {
   clear: both;
-  position: absolute;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  text-align: center;
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   background: #F2F2F2;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  margin-bottom: 0px;
 }
 
-body main .movie-list article ul li .button .reserve {
+body main .movie-list article ul li .button.reserve .a.reserve,
+body main .movie-list article ul li .button.preview .a.reserve {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr;
@@ -160,12 +157,12 @@ body main .movie-list article ul li .button .reserve {
   border-bottom-left-radius: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding-left: 26px;
   width: 110px;
-  bottom: 0px;
-  left: 0px;
 }
 
-body main .movie-list article ul li .button .preview {
+body main .movie-list article ul li .button.reserve .a.preview,
+body main .movie-list article ul li .button.preview .a.preview {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr;
@@ -173,8 +170,6 @@ body main .movie-list article ul li .button .preview {
   border-bottom-right-radius: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 110px;
-  bottom: 0px;
-  left: 110px;
+  padding-right: 31px;
 }
 /*# sourceMappingURL=style.css.map */
