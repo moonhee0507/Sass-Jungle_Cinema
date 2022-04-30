@@ -1,14 +1,17 @@
-@mixin fontstyle {
+@mixin korean-font {
   font-family: 'Noto Sans KR';
+}
+
+@mixin english-font {
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   text-align: center;
+  @include korean-font;
   main {
     width: 1060px;
-    margin-top: 86px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 86px auto 135px;
     background: #F2F2F2;
     border-radius: 15px;
     text-align: center;
@@ -22,6 +25,7 @@ body {
       margin: 0 auto;
     }
     button {
+      @include korean-font;
       font-style: normal;
       font-weight: 900;
       font-size: 16px;
@@ -40,7 +44,6 @@ body {
     .movie-list {
       article {
         padding: 0 27px 30px 27px;
-        @include fontstyle;
         ul {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -88,11 +91,14 @@ body {
                  text-overflow: ellipsis;
             }
             .spec {
-              margin: 0px 20px 0px;
+              margin: 0 20px 18px;
               dl {
-                float: left;
+                display: grid;
+                grid-template-columns: 29px 1fr 29px 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                row-gap: 5px;
+                position: relative;
                 dt {
-                  display: inline-block;
                   font-style: normal;
                   font-weight: 400;
                   font-size: 13px;
@@ -100,57 +106,198 @@ body {
                   color: #828282;
                 }
                 dd {
-                  display: inline-block;
                   font-style: normal;
                   font-weight: 400;
                   font-size: 13px;
                   line-height: 19px;
-                  margin-left: 5px;
+                }
+                .cast {
+                  grid-column: 1/2;
+                  grid-row: 3/4;
+                }
+                .cast-cont {
+                  grid-column: 2/5;
+                  grid-row: 3/4;
+                }
+                .grade-cont::before {
+                  content: '';
+                  background: url(images/별점이미지.png);
+                  background-repeat: no-repeat;
+                  background-size: 14px 14px;
+                  width: 14px;
+                  height: 14px;
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
                 }
               }
-              dl:nth-child(1) {
-                margin-right: 40px;
-              }
-              dl:nth-child(4) {
-                white-space: nowrap;
-                overflow: hidden;
-                -o-text-overflow: ellipsis;
-                   text-overflow: ellipsis;
-                margin-bottom: 58px;
-              }
             }
-            // TODO: 버튼 디자인
-            .button.reserve,
-            .button.preview {
-              clear: both;
-              @include fontstyle;
+            // TODO: 버튼 들뜸현상(border, background)
+            .button {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr;
+              @include korean-font;
               font-style: normal;
               font-weight: 500;
               font-size: 14px;
               line-height: 20px;
-              background: #F2F2F2;
-              padding-top: 8px;
-              padding-bottom: 11px;
-              margin-bottom: 0px;
-              .a.reserve {
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr;
-                border-bottom-left-radius: 10px;
+              color: #000000;
+              text-decoration: none;
+              .button.reserve {
+                border-bottom-left-radius: 9px;
+                border-top: 1px solid #BDBDBD;
+                border-right: 1px solid #BDBDBD;
                 -webkit-box-sizing: border-box;
                         box-sizing: border-box;
-                padding-left: 26px;
-                width: 110px;
+                display: block;
+                text-align: center;
+                padding-top: 8px;
+                padding-bottom: 11px;
+                background: #F2F2F2;
               }
-              .a.preview {
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr;
-                border-bottom-right-radius: 10px;
+              .button.preview {
+                border-bottom-right-radius: 9px;
+                border-top: 1px solid #BDBDBD;
                 -webkit-box-sizing: border-box;
                         box-sizing: border-box;
-                padding-right: 31px;
+                        display: inline-block;
+                text-align: center;
+                padding-top: 8px;
+                padding-bottom: 11px;
+                padding-left: 42px;
+                text-align: left;
+                background: #F2F2F2;
+                position: relative;
+              }
+              .button.preview::before {
+                content: '';
+                background: url(images/icon_paly.png);
+                background-repeat: no-repeat;
+                background-size: 14px 14px;
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                top: 12px;
+                left: 25px;
               }
             }
           }
+        }
+      }
+    }
+  }
+  footer {
+    background: #F2F2F2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    // -webkit-box-align: center;
+    //     -ms-flex-align: center;
+    //         align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    .footer-content {
+      width: 1060px;
+      margin: 0 auto;
+      padding: 53px 0 38px;
+      .co-link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding-bottom: 41px;
+        border-bottom: 1px solid #C4C4C4;
+        margin-bottom: 36px;
+        strong {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          @include english-font;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 26px;
+        }
+        .link-sns {
+          a {
+            img {
+              width: 24px;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .co-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        .co-info-list {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            dt {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: #4F4F4F;
+              margin-right: 7px;
+            }
+            dd {
+              font-style: normal;
+              font-size: 14px;
+              line-height: 20px;
+              color: #4F4F4F;
+            }
+          }
+          div::after {
+            content: "|";
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: #4F4F4F;
+            margin: 0px 7px;
+          }
+          div:nth-child(1) {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: #4F4F4F;
+          }
+          div:nth-child(5)::after {
+            content: "";
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: #4F4F4F;
+            margin: 0px 7px;
+          }
+        }
+        strong {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          @include english-font;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 20px;
+          color: #4F4F4F;
         }
       }
     }
