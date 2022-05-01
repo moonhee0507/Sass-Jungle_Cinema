@@ -17,7 +17,7 @@
 // main 가상요소
 @mixin pseudo-play {
   content: '';
-  background: url(/images/별점이미지.png);
+  background: url(../images/별점이미지.png);
   background-repeat: no-repeat;
   background-size: 14px 14px;
   width: 14px;
@@ -29,7 +29,7 @@
 @mixin pseudo-preview {
   content: '';
   content: '';
-  background: url(/images/icon_paly.png);
+  background: url(../images/icon_paly.png);
   background-repeat: no-repeat;
   background-size: 14px 14px;
   width: 14px;
