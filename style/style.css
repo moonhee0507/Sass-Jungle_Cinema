@@ -1,7 +1,6 @@
 @charset "UTF-8";
 body {
-  text-align: center;
-  font-family: 'Noto Sans KR';
+  font-family: "Noto Sans KR";
 }
 
 body main {
@@ -23,7 +22,7 @@ body main h1 {
 }
 
 body main button {
-  font-family: 'Noto Sans KR';
+  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -40,11 +39,11 @@ body main button + button {
   color: #828282;
 }
 
-body main .movie-list article {
+.movie-list article {
   padding: 0 27px 30px 27px;
 }
 
-body main .movie-list article ul {
+.movie-list article ul {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -63,7 +62,7 @@ body main .movie-list article ul {
   padding: 25px 26px 29px 26px;
 }
 
-body main .movie-list article ul li {
+.movie-list article ul li {
   width: 220px;
   border: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
@@ -75,17 +74,17 @@ body main .movie-list article ul li {
   padding-bottom: 0px;
 }
 
-body main .movie-list article ul li img {
+.poster {
   width: 180px;
   height: 250px;
   border: 1px solid #BDBDBD;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  margin: 19px 20px 0px 20px;
+  margin: 19px 19px 0px 19px;
 }
 
-body main .movie-list article ul li strong {
+.title {
   display: block;
   font-style: normal;
   font-weight: 900;
@@ -97,11 +96,11 @@ body main .movie-list article ul li strong {
   text-overflow: ellipsis;
 }
 
-body main .movie-list article ul li .spec {
+.spec {
   margin: 0 20px 18px;
 }
 
-body main .movie-list article ul li .spec dl {
+.spec dl {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 29px 1fr 29px 1fr;
@@ -112,7 +111,7 @@ body main .movie-list article ul li .spec dl {
   position: relative;
 }
 
-body main .movie-list article ul li .spec dl dt {
+.spec dl dt {
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -120,14 +119,17 @@ body main .movie-list article ul li .spec dl dt {
   color: #828282;
 }
 
-body main .movie-list article ul li .spec dl dd {
+.spec dl dd {
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 19px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-body main .movie-list article ul li .spec dl .cast {
+.spec dl .cast {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -136,7 +138,7 @@ body main .movie-list article ul li .spec dl .cast {
   grid-row: 3/4;
 }
 
-body main .movie-list article ul li .spec dl .cast-cont {
+.spec dl .cast-cont {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2/5;
@@ -145,26 +147,30 @@ body main .movie-list article ul li .spec dl .cast-cont {
   grid-row: 3/4;
 }
 
-body main .movie-list article ul li .spec dl .grade-cont::before {
+.spec dl .grade-cont {
+  margin-left: 18px;
+}
+
+.spec dl .grade-cont::before {
   content: '';
-  background: url(images/별점이미지.png);
+  background: url(/images/별점이미지.png);
   background-repeat: no-repeat;
   background-size: 14px 14px;
   width: 14px;
   height: 14px;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 2px;
+  left: 120px;
 }
 
-body main .movie-list article ul li .button {
+.button {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  font-family: 'Noto Sans KR';
+  font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -173,8 +179,8 @@ body main .movie-list article ul li .button {
   text-decoration: none;
 }
 
-body main .movie-list article ul li .button .button.reserve {
-  border-bottom-left-radius: 9px;
+.button.reserve {
+  border-bottom-left-radius: 10px;
   border-top: 1px solid #BDBDBD;
   border-right: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
@@ -186,8 +192,8 @@ body main .movie-list article ul li .button .button.reserve {
   background: #F2F2F2;
 }
 
-body main .movie-list article ul li .button .button.preview {
-  border-bottom-right-radius: 9px;
+.button.preview {
+  border-bottom-right-radius: 10px;
   border-top: 1px solid #BDBDBD;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -201,9 +207,10 @@ body main .movie-list article ul li .button .button.preview {
   position: relative;
 }
 
-body main .movie-list article ul li .button .button.preview::before {
+.button.preview::before {
   content: '';
-  background: url(images/icon_paly.png);
+  content: '';
+  background: url(/images/icon_paly.png);
   background-repeat: no-repeat;
   background-size: 14px 14px;
   width: 14px;
@@ -213,7 +220,7 @@ body main .movie-list article ul li .button .button.preview::before {
   left: 25px;
 }
 
-body footer {
+footer {
   background: #F2F2F2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,13 +230,13 @@ body footer {
   justify-content: center;
 }
 
-body footer .footer-content {
+footer .footer-cont {
   width: 1060px;
   margin: 0 auto;
   padding: 53px 0 38px;
 }
 
-body footer .footer-content .co-link {
+footer .footer-cont .co-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,23 +248,23 @@ body footer .footer-content .co-link {
   margin-bottom: 36px;
 }
 
-body footer .footer-content .co-link strong {
+footer .footer-cont .co-link strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 26px;
 }
 
-body footer .footer-content .co-link .link-sns a img {
+footer .footer-cont .co-link .link-sns a img {
   width: 24px;
   margin-left: 20px;
 }
 
-body footer .footer-content .co-info {
+.co-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,67 +276,69 @@ body footer .footer-content .co-info {
   align-items: center;
 }
 
-body footer .footer-content .co-info .co-info-list {
+.co-info-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body footer .footer-content .co-info .co-info-list div {
+.co-info-list div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body footer .footer-content .co-info .co-info-list div dt {
+.co-info-list div::after {
+  content: "|";
   font-style: normal;
-  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   color: #4F4F4F;
+  font-weight: 700;
+  margin: 0px 7px;
+}
+
+.co-info-list div:nth-child(1) {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F4F4F;
+  font-weight: 700;
+}
+
+.co-info-list div:nth-child(5)::after {
+  content: "";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F4F4F;
+  font-weight: 700;
+  margin: 0px 7px;
+}
+
+.co-info-list div dt {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F4F4F;
+  font-weight: 700;
   margin-right: 7px;
 }
 
-body footer .footer-content .co-info .co-info-list div dd {
+.co-info-list div dd {
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
   color: #4F4F4F;
 }
 
-body footer .footer-content .co-info .co-info-list div::after {
-  content: "|";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #4F4F4F;
-  margin: 0px 7px;
-}
-
-body footer .footer-content .co-info .co-info-list div:nth-child(1) {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #4F4F4F;
-}
-
-body footer .footer-content .co-info .co-info-list div:nth-child(5)::after {
-  content: "";
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #4F4F4F;
-  margin: 0px 7px;
-}
-
-body footer .footer-content .co-info strong {
+.co-info strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
+  font-family: "Roboto";
   font-weight: 700;
+  font-style: normal;
   font-size: 14px;
   line-height: 20px;
   color: #4F4F4F;

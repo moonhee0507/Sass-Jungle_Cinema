@@ -1,0 +1,97 @@
+footer {
+  background: $bgcolor;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  .footer-cont {
+    width: 1060px;
+    margin: 0 auto;
+    padding: 53px 0 38px;
+    .co-link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-bottom: 41px;
+      border-bottom: 1px solid #C4C4C4;
+      margin-bottom: 36px;
+      strong {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-family: map-get($base-font, "english");
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+      }
+      .link-sns {
+        a {
+          img {
+            width: 24px;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.co-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  &-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      &::after {
+        content: "|";
+        @include footer-dl-style;
+        font-weight: 700;
+        margin: 0px 7px;
+      }
+      &:nth-child(1) {
+        @include footer-dl-style;
+        font-weight: 700;
+      }
+      &:nth-child(5)::after {
+        content: "";
+        @include footer-dl-style;
+        font-weight: 700;
+        margin: 0px 7px;
+      }
+      dt {
+        @include footer-dl-style;
+        font-weight: 700;
+        margin-right: 7px;
+      }
+      dd {
+        @include footer-dl-style;
+      }
+    }
+  }
+  strong {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: map-get($base-font, "english");
+    font-weight: 700;
+    @include footer-dl-style;
+  }
+}

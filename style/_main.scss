@@ -1,0 +1,164 @@
+body {
+  font-family: map-get($base-font, korean);
+  main {
+    width: 1060px;
+    margin: 86px auto 135px;
+    background: $bgcolor;
+    border-radius: 15px;
+    text-align: center;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 100px;
+      width: 650px;
+      border-bottom: map-get($bd-style, "main-ul");
+      margin: 0 auto;
+    }
+    button {
+      font-family: map-get($base-font, korean);
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      margin: 28px 30px;
+      & + button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #828282;      
+      }
+    }
+  }
+}
+
+// main
+.movie-list {
+  article {
+    padding: 0 27px 30px 27px;
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      -webkit-column-gap: 23px;
+         -moz-column-gap: 23px;
+              column-gap: 23px;
+      row-gap: 24px;
+      width: 1003px;
+      border: map-get($bd-style, "main-ul");
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 15px;
+      background: #FFFFFF;
+      padding: 25px 26px 29px 26px;
+      li {
+        width: 220px;
+        border: map-get($bd-style, "li");
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        text-align: left;
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
+
+// 
+.poster {
+  width: 180px;
+  height: 250px;
+  border: map-get($bd-style, "li");
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 19px 19px 0px 19px;
+}
+.title {
+  display: block;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 11px 20px 12px;
+  @include ellipsis;
+}
+.spec {
+  margin: 0 20px 18px;
+  dl {
+    display: grid;
+    grid-template-columns: 29px 1fr 29px 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 5px;
+    position: relative;
+    dt {
+      @include spec-fontstyle;
+      color: #828282;
+    }
+    dd {
+      @include spec-fontstyle;
+      @include ellipsis;
+    }
+    .cast {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      &-cont {
+        grid-column: 2/5;
+        grid-row: 3/4;
+      }
+    }
+    .grade-cont {
+      margin-left: 18px;
+      &::before {
+        @include pseudo-play;
+      }
+    }
+  }
+}
+
+// 
+.button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  font-family: map-get($base-font, korean);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+  &.reserve {
+    border-bottom-left-radius: 10px;
+    border-top: map-get($bd-style, "li");
+    border-right: map-get($bd-style, "li");
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    background: #F2F2F2;
+  }
+  &.preview {
+    border-bottom-right-radius: 10px;
+    border-top: map-get($bd-style, "li");
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: inline-block;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    text-align: left;
+    background: #F2F2F2;
+    position: relative;
+    &::before {
+      @include pseudo-preview;
+    }
+  }
+}
