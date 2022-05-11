@@ -9,3 +9,8 @@
 
 ## 구현내용
 https://moonhee0507.github.io/Sass-Jungle_Cinema/
+
+## 어려웠던 점
+<li>영화의 스펙 부분을 처음에는 float으로 구현했으나 아래 2개의 버튼에 clear: both;를 줘도 위치문제가 해결되지 않아 grid로 해결하였습니다.</li>
+<li></li>
+<li></li>
